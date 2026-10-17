@@ -1,0 +1,22 @@
+{
+  "$schema": "https://github.com",
+  "logo": {
+    "source": "~/.config/fastfetch/ascii.txt",
+    "type": "auto"
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "wm",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "battery",
+    "break",
+    "colors"
+  ]
+}

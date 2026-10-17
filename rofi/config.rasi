@@ -1,0 +1,140 @@
+kkconfiguration {
+    modi: "run,drun,window";
+    icon-theme: "Papirus";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 󰕰  Window";
+    sidebar-mode: true;
+
+    /* --- Switch modes with plain Arrow Keys --- */
+    kb-mode-next: "Right";
+    kb-mode-previous: "Left";
+
+    /* --- Remap text cursor movement so it doesn't conflict --- */
+    kb-move-char-back: "Control+b";
+    kb-move-char-forward: "Control+f";
+}
+@theme "/dev/null"
+
+* {
+    /* 85% Opacity Pure Black/Dark Backgrounds (Hex: D9) */
+    bg-col:  #000000D9;         /* Pure black base */
+    bg-col-light: #1c1c1cD9;    /* Dark grey element background */
+    border-col: #ffffffD9;      /* Clean white border */
+    selected-col: #262626D9;    /* Highlighted item background */
+    
+    /* Full Opacity Monochrome Text/Accents */
+    accent-white: #ffffff;      /* Replaces the old blue accent */
+    fg-col: #eeeeee;            /* Main crisp white text */
+    fg-col2: #ffffff;           /* Alternate text */
+    grey: #767676;              /* Muted grey for unselected tabs/hints */
+
+    width: 600;
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 360px;
+    border: 2px;
+    border-color: @border-col;
+    background-color: @bg-col;
+    border-radius: 12px;
+}
+
+mainbox {
+    background-color: transparent;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @accent-white;
+    padding: 6px;
+    text-color: #000000;         /* Black text inside the white badge */
+    border-radius: 3px;
+    margin: 10px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 10px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: transparent;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 20px 0px 20px;
+    columns: 1;
+    lines: 5;
+    background-color: transparent;
+}
+
+element {
+    padding: 5px;
+    background-color: transparent;
+    text-color: @fg-col;
+    border-radius: 5px;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @selected-col ;
+    text-color: @accent-white ;
+}
+
+mode-switcher {
+    spacing: 0;
+  }
+
+button {
+    padding: 10px;
+    background-color: transparent;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: transparent;
+  text-color: @accent-white;
+}
+
+message {
+    background-color: transparent;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 10px 0px 0px 20px;
+    text-color: @accent-white;
+    background-color: transparent;
+}

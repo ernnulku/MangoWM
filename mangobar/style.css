@@ -1,0 +1,180 @@
+/* MangoBar — Pure Black with White Focused Workspaces */
+
+@define-color color-bg                         #000000;
+@define-color color-fg                         #ffffff;
+@define-color color-bg-alt                     #000000;
+
+@define-color color-button-urgent-bg           #ffffff;
+@define-color color-button-urgent-fg           #000000;
+@define-color color-workspace-button-bg        #000000;
+@define-color color-workspace-button-fg        #888888;
+@define-color color-workspace-button-hover-bg  #222222;
+@define-color color-workspace-button-hover-fg  #ffffff;
+@define-color color-workspace-button-focused-bg #ffffff;
+@define-color color-workspace-button-focused-fg #000000;
+
+/* Global */
+* {
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: @color-fg;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+}
+
+/* Main bar */
+#bar {
+    background-color: @color-bg;
+    color: @color-fg;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #222222;
+}
+
+/* Selected bar */
+#bar.sel {
+    background: @color-bg;
+}
+
+/* Workspaces */
+#tags {
+    padding: 0 8px;
+    margin: 0;
+    background-color: @color-workspace-button-bg;
+    color: @color-workspace-button-fg;
+}
+
+#tags:hover {
+    background-color: @color-workspace-button-hover-bg;
+    color: @color-workspace-button-hover-fg;
+}
+
+#tags.active {
+    background-color: @color-workspace-button-focused-bg;
+    color: @color-workspace-button-focused-fg;
+}
+
+#tags.urgent {
+    background-color: @color-button-urgent-bg;
+    color: @color-button-urgent-fg;
+}
+
+#tags.occupied,
+#tags.empty {
+    background-color: @color-bg;
+    color: @color-workspace-button-fg;
+}
+
+/* Overview */
+#overview {
+    padding: 0 8px;
+    background-color: @color-workspace-button-focused-bg;
+    color: @color-workspace-button-focused-fg;
+}
+
+/* Layout indicator */
+#layout {
+    padding: 0 8px;
+    margin: 0;
+    background-color: @color-bg;
+}
+
+/* Center window title */
+#title {
+    background-color: @color-bg;
+    color: @color-fg;
+    margin: 0;
+    padding: 0 10px;
+    min-height: 0;
+    border-radius: 0;
+}
+
+/* MPRIS Media Player */
+#mpris {
+    background-color: @color-bg;
+    color: @color-fg;
+    padding: 0 8px;
+    font-weight: 700;
+}
+
+/* Custom CPU Cat */
+#custom-cpucat {
+    font-family: "Waycat", monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0 8px;
+    background-color: @color-bg;
+}
+
+/* Right-side modules */
+#clock,
+#clock.date,
+#cpu,
+#mem,
+#brightness,
+#volume,
+#wireplumber,
+#network,
+#battery,
+#keymode,
+#keyboardlayout {
+    background-color: @color-bg;
+    color: @color-fg;
+    padding: 0 7px;
+    margin: 0;
+    min-height: 0;
+}
+
+#battery.warning {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1px 4px;
+}
+
+#battery.critical {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1px 4px;
+}
+
+#wireplumber.muted {
+    opacity: 0.5;
+}
+
+/* Power */
+#custom-power {
+    padding: 0 8px;
+    margin: 0;
+    background-color: @color-bg;
+}
+
+/* Tray */
+#tray {
+    padding: 0 6px;
+    margin: 0;
+    background-color: @color-bg;
+}
+
+/* Menus */
+menu {
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 0;
+    font-size: 13px;
+}
+
+menuitem {
+    color: @color-fg;
+    padding: 4px 8px;
+    border-radius: 0;
+}
+
+menuitem:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
