@@ -1,0 +1,138 @@
+/*****----- Configuration -----*****/
+configuration {
+    modi:                       "drun,run";
+    show-icons:                 true;
+    display-drun:               "";
+    drun-format:                "{name} <span weight='light' size='small' foreground='#444444'>({generic})</span>";
+}
+
+/*****----- Global Properties -----*****/
+* {
+    font:                        "JetBrainsMono Nerd Font Bold 12";
+    background:                  #000000;
+    foreground:                  #FFFFFF;
+    dim-white:                   #444444;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       400px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    /* Clean 1px sharp pure white border outline around the window */
+    border:                      1px solid;
+    border-color:                #FFFFFF;
+    border-radius:               0px;
+    background-color:            @background;
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     24px;   
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Input bar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px 0px 16px 0px;
+    padding:                     0px 0px 12px 0px;
+    
+    border:                      0px 0px 1px 0px solid;
+    border-color:                #1A1A1A;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    [ "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "text";
+    placeholder:                 "Learn...";
+    placeholder-color:           @dim-white;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     8px;    
+    margin:                      0px;
+    padding:                     0px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     12px;   
+    margin:                      0px;
+    padding:                     10px 14px;
+    border-radius:               0px;
+    border:                      1px solid;
+    border-color:                transparent;
+    background-color:            transparent;
+    cursor:                      "pointer";
+}
+
+/* Clear out backgrounds for ALL unselected row state variations */
+element normal.normal, element alternate.normal,
+element normal.urgent, element alternate.urgent,
+element normal.active, element alternate.active {
+    background-color:            transparent;
+}
+
+/* Force ONLY the border look across ALL possible selected state variations */
+element selected.normal, 
+element selected.urgent, 
+element selected.active {
+    background-color:            transparent;
+    border:                      1px solid;
+    border-color:                #FFFFFF;
+}
+
+element-icon {
+    background-color:            transparent;
+    size:                        20px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  #FFFFFF; 
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/* Keep text color consistently white across all selected states */
+element selected.normal element-text,
+element selected.urgent element-text,
+element selected.active element-text {
+    text-color:                  #FFFFFF; 
+}

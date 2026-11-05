@@ -1,0 +1,43 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* Use the precise JetBrains Mono Nerd Font package name */
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Left side workspaces formatting */
+#workspaces button {
+    padding: 0 8px;
+    color: #555555; /* Muted grey for inactive workspaces */
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #ffffff; /* Stark white for active workspace */
+}
+
+#workspaces button:hover {
+    background: #222222;
+    color: #ffffff;
+}
+
+/* Individual Module Spacing */
+#clock, #pulseaudio, #battery {
+    padding: 0 12px;
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Optional high-contrast warning styles if battery gets critically low */
+#battery.critical:not(.charging) {
+    background-color: #ffffff;
+    color: #000000;
+}
