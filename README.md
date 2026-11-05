@@ -2,4 +2,4 @@
 
 apps i used
 
-sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp
+sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp hyprlock neovim
