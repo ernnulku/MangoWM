@@ -1,3 +1,5 @@
 <img width="1923" height="1080" alt="20261105_14h11m26s_grim" src="https://github.com/user-attachments/assets/7be8f180-5e77-4dfb-9ca8-88978507a96e" />
-waybar – The status bar for Wayland compositors.   mako – A lightweight notification daemon for Wayland.   wlr-randr – A utility to configure outputs (displays, resolutions, and refresh rates) on Wayland compositors (used here to set up your 144Hz monitor).   hypridle – An idle management daemon.   swaybg – A wallpaper wallpaper-rendering tool for Wayland (used to set your desktop background image).   wpctl – The command-line control utility for WirePlumber/PipeWire audio management (handles volume and mute toggles).   brightnessctl – A tool to control device screen brightness.   rofi – A window switcher, run dialog, and application launcher (rofi -show drun opens your app menu).   kitty – Your GPU-accelerated terminal emulator.   grim – A command-line utility to capture screenshots on Wayland.   slurp – A region selector tool for Wayland (used alongside grim to select an area for screenshots).
+
+apps i used
+
 sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp
