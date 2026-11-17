@@ -11,4 +11,4 @@ dependencies : sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber 
 
 mangowm!
 
-for setup -> 
+for setup -> git clone https://github.com/ernnulku/MangoWM.git && cd MangoWM && bash setup.sh
