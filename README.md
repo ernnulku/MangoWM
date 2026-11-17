@@ -6,7 +6,7 @@
 
 
 
-dependencies : sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp hyprlock neovim ttf-jetbrains-mono-nerd
+dependencies : sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp hyprlock neovim ttf-jetbrains-mono-nerd fastfetch fish 
 
 
 mangowm!
