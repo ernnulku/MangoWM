@@ -1,0 +1,24 @@
+{
+  "$schema": "https://github.com",
+  "logo": {
+    "type": "kitty-direct",
+    "source": "/home/eren/MIKU-removebg-preview(1).png",
+    "padding": {
+      "right": 2
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "wm",
+    "uptime",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "battery"
+  ]
+}

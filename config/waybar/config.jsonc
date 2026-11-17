@@ -1,0 +1,127 @@
+//-*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 26, // Slightly increased from 12 to give vertical breathing room
+    "spacing": 4,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 6,
+
+    "modules-left": [
+        "custom/arch",
+        "ext/workspaces",
+        "custom/sep",
+        "mpris"
+    ],
+    "modules-center": [],
+
+    "modules-right": [
+        "custom/cpucat",
+        "custom/sep",
+        "wireplumber",
+        "custom/sep",
+        "cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "disk",
+        "custom/sep",
+        "battery",
+        "custom/sep",
+        "clock",
+        "custom/sep",
+        "tray"
+    ],
+
+    "ext/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 9
+        }
+    },
+
+    "custom/arch": {
+        "format": "  󰣇  ",
+        "tooltip": false
+    },
+
+    "custom/cpucat": {
+        "exec": "~/.config/waybar/scripts/catloop.sh"
+    },
+
+    "ext/window": {
+        "max-length": 40,
+        "seperate-outputs": false
+    },
+
+    "mpris": {
+        "format": " {artist} - {title}",
+        "format-paused": "󰐊 {artist} - {title}",
+        "max-length": 45,
+        "tooltip": true,
+        "player": "spotify"
+    },
+
+    "wireplumber": {
+        "format": "Vol: {volume}%",
+        "format-muted": "Muted",
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "clock": {
+        "on-click": "pkill -x waycal || waycal",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "Ram: {used}GiB"
+    },
+
+    "disk": {
+        "interval": 1,
+        "path": "/",
+        "format": "Disk: {free}",
+        "on-click": "kitty archclean --force full"
+    },
+
+        "battery": {
+        "states": {
+            "good": 95,
+            "warning": 50,
+            "critical": 15,
+            "on-click": "wlogout"
+        },
+        "on-scroll-up": "brightnessctl -e4 -n2 set 5%+",
+        "on-scroll-down": "brightnessctl -e4 -n2 set 5%-",
+        "format": "Bat: {capacity}% {icon} {time}",
+        "format-charging": "Bat: {capacity}%    {time}",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "Bat {capacity}%",
+        "format-time": "{H}:{M}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "network": {
+        "format": "Connected",
+        "format-disconnected": "Disconnected ⚠"
+    },
+
+    "custom/sep": {
+        "format": "",
+        "interval": "once"
+    }
+}
