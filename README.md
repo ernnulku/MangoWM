@@ -10,6 +10,6 @@ MangoWM Rice!
 
 
 
-Arch Linux Packages -> sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp hyprlock neovim ttf-jetbrains-mono-nerd fastfetch fish 
+Arch Linux Packages -> sudo pacman -S waybar mako wlr-randr hypridle swaybg wireplumber brightnessctl rofi-wayland kitty grim slurp hyprlock neovim ttf-jetbrains-mono-nerd fastfetch fish mangowm
 
 Setup -> git clone https://github.com/ernnulku/MangoWM.git && cd MangoWM && bash setup.sh
